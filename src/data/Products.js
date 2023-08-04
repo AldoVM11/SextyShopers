@@ -14,7 +14,7 @@ const products = [ {
         _id: "2",
         name: "Laboris cillum nisi aliquip laboris",
         image:
-            "https://chpic.su/_data/stickers/p/PeepoHD/PeepoHD_111.webp",
+            "https://images.fineartamerica.com/images/artworkimages/medium/3/peepo-clap-maria-s-fredericks-transparent.png",
         description:
             "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
         price: 599,
@@ -31,7 +31,7 @@ const products = [ {
             "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
         price: 89,
         countInStock: 3,
-        rating: 4,
+        rating: 4.5,
         numReviews: 4,
     },
     {

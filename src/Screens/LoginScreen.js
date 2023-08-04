@@ -1,9 +1,7 @@
 import {Box, Button, Heading, Image, Input, Text, VStack, View } from "native-base";
 import React from 'react'
 import Colors from "../color";
-import { MaterialIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { Pressable } from "react-native";
+import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 
 function LoginScreen() {
@@ -62,10 +60,10 @@ function LoginScreen() {
           >
             Login
           </Button>
-          <Pressable mt={4}>
-            <Text color={Colors.gray} rounded={50} w="40%" textAlign="center"> Sign Up</Text>
-          </Pressable>
-        </Box>
+          <Button bg={Colors.deepestGray} rounded={50} w="40%" textAlign="center">
+            Sign Up
+          </Button>   
+          </Box>
     </Box>
   );
 }
