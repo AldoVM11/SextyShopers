@@ -8,7 +8,7 @@ import SingleProductScreen from "./src/Screens/SingleProductScreen";
 export default function App() {
   return(
     <NativeBaseProvider>
-      <SingleProductScreen />
+      <HomeScreen />
   </NativeBaseProvider>
   );
  }

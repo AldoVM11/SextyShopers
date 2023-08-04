@@ -42,7 +42,7 @@ function HomeProducts() {
             />
             <Box px={4} pt={1}>
               <Heading size="sm" bold>
-                ${product.price}
+                {product.price}
               </Heading>
               <Text fontSize={10} mt={1} isTruncated w={"full"}>
                 {product.name}

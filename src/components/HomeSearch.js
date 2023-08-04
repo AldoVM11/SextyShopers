@@ -16,7 +16,7 @@ function HomeSearch() {
       alignItems="center"
       safeAreaTop
     >
-      <Input
+{/*       <Input
         placeholder="Nike,Puma,Adidas ...."
         w="85%"
         bg={Colors.white}
@@ -42,7 +42,7 @@ function HomeSearch() {
             fontSize: "11px",
           }}
         >5</Box>
-      </Pressable>
+      </Pressable> */}
     </HStack>
   );
 }
