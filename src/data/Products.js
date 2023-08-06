@@ -66,7 +66,7 @@ const products = [ {
         description:
             "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
         price: 89,
-        countInStock: 3,
+        countInStock: 0,
         rating: 4,
         numReviews: 4,
     },

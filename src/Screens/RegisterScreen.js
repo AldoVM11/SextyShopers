@@ -1,9 +1,9 @@
-import {Box, Button, Heading, Image, Input, Text, VStack, View } from "native-base";
+import {Box, Button, Heading, Image, Input, Pressable, Text, VStack, View } from "native-base";
 import React from 'react';
 import Colors from "../color";
 import { MaterialIcons, FontAwesome, Ionicons } from '@expo/vector-icons';
 
-function RegisterScreen() {
+function RegisterScreen( {navigation}) {
   return (
     <Box flex={1} bg={Colors.black}>
         <Image 
@@ -71,12 +71,13 @@ function RegisterScreen() {
             w="40%" 
             rounded={50} 
             bg={Colors.main}
+            onPress={() => navigation.navigate("Bottom")}
           >
             Sign Up
           </Button>
-          <Button bg={Colors.deepestGray} rounded={50} w="40%" textAlign="center">
-            Login
-          </Button>   
+          <Pressable mt={4}  onPress={() => navigation.navigate("Login")}>
+            <Text color={Colors.deepestGray} >Login</Text>
+          </Pressable>    
           </Box>
     </Box>
   );

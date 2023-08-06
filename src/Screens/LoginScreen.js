@@ -1,10 +1,10 @@
-import {Box, Button, Heading, Image, Input, Text, VStack, View } from "native-base";
+import {Box, Button, Heading, Image, Input, Pressable, Text, VStack, View } from "native-base";
 import React from 'react'
 import Colors from "../color";
 import { MaterialIcons, Ionicons } from '@expo/vector-icons';
 
 
-function LoginScreen() {
+function LoginScreen({navigation}) {
   return (
     <Box flex={1} bg={Colors.black}>
         <Image 
@@ -57,12 +57,13 @@ function LoginScreen() {
             w="40%" 
             rounded={50} 
             bg={Colors.main}
+            onPress={() => navigation.navigate("Bottom")}
           >
             Login
           </Button>
-          <Button bg={Colors.deepestGray} rounded={50} w="40%" textAlign="center">
-            Sign Up
-          </Button>   
+          <Pressable mt={4}  onPress={() => navigation.navigate("Register")}>
+            <Text color={Colors.deepestGray} >Sign Up</Text>
+          </Pressable>   
           </Box>
     </Box>
   );
