@@ -13,6 +13,7 @@ function RegisterScreen( {navigation}) {
         size="lg"
         w="full"
         source={require("../../assets/cover.png")}
+        
         />
         <Box 
         w="full" 
@@ -21,20 +22,24 @@ function RegisterScreen( {navigation}) {
         top="0" 
         px="6" 
         justifyContent="center">
-          <Heading>Sign Up</Heading> 
+          <Heading color={Colors.main}>Sign Up</Heading> 
           <VStack space={5} pt="6">
             {/* Username */}
             <Input
             InputLeftElement={
             <FontAwesome name="user" size={20} color={Colors.main} /> 
             }
+
             variant="underlined" 
-            placeholder="John Doe" 
+            placeholder="User"
             w="70%" 
             pl={2}
             type="text"
-            color={Colors.main} 
+            color={Colors.black} 
             borderBottomColor={Colors.underline}
+            backgroundColor={Colors.deepestGray} opacity={60}
+            placeholderTextColor={Colors.black}
+            rounded={10}
             />
             {/* Email */}
             <Input
@@ -47,7 +52,9 @@ function RegisterScreen( {navigation}) {
             pl={2}
             type="text"
             color={Colors.main} 
-            borderBottomColor={Colors.underline}
+            backgroundColor={Colors.deepestGray} opacity={60}
+            placeholderTextColor={Colors.black}
+            rounded={10}
             />
             {/* Password */}
             <Input
@@ -55,12 +62,14 @@ function RegisterScreen( {navigation}) {
               <Ionicons name="eye" size={20} color={Colors.main} />
             }
             variant="underlined" 
-            placeholder="********" 
+            placeholder="*********" 
             w="70%" 
             type="password"
             pl={2}
             color={Colors.main} 
-            borderBottomColor={Colors.underline}
+            backgroundColor={Colors.deepestGray} opacity={60}
+            placeholderTextColor={Colors.black}
+            rounded={10}
             />
           </VStack>
           <Button 
@@ -75,9 +84,15 @@ function RegisterScreen( {navigation}) {
           >
             Sign Up
           </Button>
-          <Pressable mt={4}  onPress={() => navigation.navigate("Login")}>
-            <Text color={Colors.deepestGray} >Login</Text>
-          </Pressable>    
+          <Button _pressed={{
+              bg: Colors.main,
+            }}
+            my={0} 
+            w="40%" 
+            rounded={50} 
+            bg={Colors.main}  onPress={() => navigation.navigate("Login")}>
+            <Text color={Colors.white} >Login</Text>
+          </Button>    
           </Box>
     </Box>
   );

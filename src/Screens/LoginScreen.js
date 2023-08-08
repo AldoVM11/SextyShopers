@@ -22,7 +22,7 @@ function LoginScreen({navigation}) {
         top="0" 
         px="6" 
         justifyContent="center">
-          <Heading>Login</Heading> 
+          <Heading color={Colors.main}>Login</Heading> 
           <VStack space={5} pt="6">
             <Input
             InputLeftElement={
@@ -61,9 +61,15 @@ function LoginScreen({navigation}) {
           >
             Login
           </Button>
-          <Pressable mt={4}  onPress={() => navigation.navigate("Register")}>
-            <Text color={Colors.deepestGray} >Sign Up</Text>
-          </Pressable>   
+          <Button _pressed={{
+              bg: Colors.main,
+            }}
+            my={0} 
+            w="40%" 
+            rounded={50} 
+            bg={Colors.main}  onPress={() => navigation.navigate("Register")}>
+            <Text color={Colors.white} >Sign Up</Text>
+          </Button>   
           </Box>
     </Box>
   );
