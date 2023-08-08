@@ -7,7 +7,7 @@ function ProfileScreen() {
   return (
     <>
         <Center bg={Colors.main} pt={10} pb={6}>
-          <Image source={{uri:"https://cdn3.emoji.gg/emojis/5722_PeepoSnack.png"}} alt="profile" w={24} h={24} resizeMode="cover" borderRadius={100}/>
+          <Image source={require('../../assets/images/user.png')} alt="profile" w={24} h={24} resizeMode="cover" borderRadius={100}/>
           <Heading bold fontSize={15} isTruncated my={2} color={Colors.white}>
             Admin Doe
           </Heading>
@@ -16,6 +16,7 @@ function ProfileScreen() {
           </Center>
           {/* Tabs */}
           <Tabs></Tabs>
+          
     </>
   )
 }

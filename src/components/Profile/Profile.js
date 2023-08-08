@@ -1,4 +1,4 @@
-import { Box, FormControl, Input, ScrollView, VStack } from 'native-base'
+import { Box, Center, FormControl, Input, ScrollView, Text, VStack } from 'native-base'
 import React from 'react'
 import Colors from '../../color'
 import Buttone from '../Buttone'
@@ -26,6 +26,9 @@ const Profile = () => {
     <Box h="full" bg={Colors.white} px={5}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <VStack space={10} mt={5} pb={10}>
+        <Center>
+          <Text bold fontSize={15} isTruncated my={0}>Change User Information</Text>
+          </Center>
           {Inputs.map((i, index) => (
             <FormControl key={index}>
               <FormControl.Label

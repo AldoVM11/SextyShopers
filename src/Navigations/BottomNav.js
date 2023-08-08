@@ -59,21 +59,21 @@ const BottomNav = () => {
       />
       {/* Cart */}
       <Tab.Screen
-        name="Cart"
+        name="Glossary"
         component={CartScreen}
         options={{
           tabBarButton: (props) => <CustomTab {...props} />,
           tabBarIcon: ({ focused }) => (
             <Center>
               {focused ? (
-                <FontAwesome5
-                  name="shopping-basket"
+                <MaterialCommunityIcons
+                  name="file-document"
                   size={24}
                   color={Colors.main}
                 />
               ) : (
                 <MaterialCommunityIcons
-                  name="shopping-outline"
+                  name="file-document-outline"
                   size={24}
                   color={Colors.black}
                 />

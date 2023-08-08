@@ -14,6 +14,7 @@ import Rating from "./Rating";
 import { useNavigation } from "@react-navigation/native";
 
 function HomeProducts() {
+  
   const navigation = useNavigation();
   return (
     <ScrollView flex={1} showsVerticalScrollIndicator={false}>
@@ -22,6 +23,7 @@ function HomeProducts() {
         direction="row"
         justifyContent="space-between"
         px={6}
+        marginTop={155}
       >
         {Products.map((product) => (
           <Pressable
@@ -45,13 +47,11 @@ function HomeProducts() {
             />
             <Box px={4} pt={1}>
               <Heading size="sm" bold>
-                {product.price}
+                {product.name}
               </Heading>
               <Text fontSize={10} mt={1} isTruncated w={"full"}>
-                {product.name}
+                {product.description}
               </Text>
-              {/* Rating */}
-              <Rating value={product.rating}/>
             </Box>
           </Pressable>
         ))}

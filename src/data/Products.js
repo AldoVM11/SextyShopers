@@ -1,52 +1,49 @@
-const products = [ {
-        _id: "1",
-        name: "Laboris cillum nisi aliquip laboris",
-        image:
-            "https://i.pinimg.com/originals/c4/b9/0e/c4b90e35644d7e8b9000401857c197c6.png",
-        description:
-            "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
-        price: 89,
-        countInStock: 3,
-        rating: 4,
-        numReviews: 4,
-    },
-    {
-        _id: "2",
-        name: "Laboris cillum nisi aliquip laboris",
-        image:
-            "https://images.fineartamerica.com/images/artworkimages/medium/3/peepo-clap-maria-s-fredericks-transparent.png",
-        description:
-            "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
-        price: "asdasdasd",
-        countInStock: 10,
-        rating: 2,
-        numReviews: 3,
-    },
-    {
-        _id: "3",
-        name: "Laboris cillum nisi aliquip laboris",
-        image:
-            "https://pbs.twimg.com/media/FxfleHlX0AQ6iTo.png",
-        description:
-            "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
-        price: 89,
-        countInStock: 3,
-        rating: 4.5,
-        numReviews: 4,
-    },
-    {
-        _id: "4",
-        name: "Laboris cillum nisi aliquip laboris",
-        image:
-            "https://storage.googleapis.com/sticker-prod/YGq5TTZZ2ijJUMDPHpEI/13.png",
-        description:
-            "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
-        price: 89,
-        countInStock: 3,
-        rating: 4,
-        numReviews: 4,
-    },
-    {
+const products = [
+  {
+    _id: "1",
+    name: "First Sales of the Month",
+    image: "https://i.imgur.com/c2e3Cuk.png",
+    description:
+      "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
+    /*         price: "First Sales of the Month",
+     */ countInStock: 3,
+    rating: 4,
+    numReviews: 4,
+  },
+  {
+    _id: "2",
+    name: "Comparision with other restaurants",
+    image: "https://i.imgur.com/ecKjVfU.png",
+    description:
+      "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
+    /*         price: "Comparision with other restaurants",
+     */ countInStock: 10,
+    rating: 2,
+    numReviews: 3,
+  },
+  {
+    _id: "3",
+    name: "Up's & Down's of the Company",
+    image: "https://i.imgur.com/0rRMswQ.png",
+    description:
+      "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
+    /*         price: "Up's & Down's of the Company",
+     */ countInStock: 3,
+    rating: 4.5,
+    numReviews: 4,
+  },
+  {
+    _id: "4",
+    name: "Comparision with previous years",
+    image: "https://i.imgur.com/wwGf3DA.gif",
+    description:
+      "Qui esse laboris incididunt adipisicing ex dolor anim deserunt dolor qui adipisicing amet.  Commodo laborum anim commodo excepteur labore pariatur. Excepteur anim aute laborum incididunt quis officia aliquip. Duis ad ut cillum non in mollit duis aliqua ad laborum.",
+    /*         price: "Comparision with previous years",
+     */ countInStock: 3,
+    rating: 4,
+    numReviews: 4,
+  },
+  /*     {
         _id: "5",
         name: "Laboris cillum nisi aliquip laboris",
         image:
@@ -69,7 +66,7 @@ const products = [ {
         countInStock: 0,
         rating: 4,
         numReviews: 4,
-    },
+    }, */
 ];
 
 export default products;

@@ -12,6 +12,7 @@ function SingleProductScreen({route}) {
   const navigation = useNavigation()
   const product = route.params
   return (
+    
     <Box safeArea flex={1} bg={Colors.white}>
       <ScrollView px={5} showsVerticalScrollIndicator={false}>
         <Image
@@ -21,46 +22,12 @@ function SingleProductScreen({route}) {
           h={300}
           resizeMode="contain"
         />
-        <Heading bold fontSize={15} mb={2} lineHeight={22}>
+        <Heading bold fontSize={20} mb={2} lineHeight={22} textAlign='center'>
           {product.name}
         </Heading>
-        <Rating value={product.rating} text={`${product.numReviews} reviews`}/>
-        <HStack space={2} alignItems="center" my={5}>
-          {
-            product.countInStock > 0 ? (
-          <NumericInput
-            value={value}
-            totalWidth={140}
-            totalHeight={30}
-            iconSize={25}
-            step={1}
-            maxValue={product.countInStock}
-            minValue={0}
-            borderColor={Colors.deepGray}
-            rounded
-            textColor={Colors.black}
-            iconStyle={{color:Colors.white}}
-            rightButtonBackgroundColor={Colors.main}
-            leftButtonBackgroundColor={Colors.main}
-          />
-          ):
-          <Heading bold color={Colors.red} italic fontSize={12}>
-            Out of Stock
-          </Heading>
-          }
-          <Spacer/>
-          <Heading bold color={Colors.black} fontSize={19}>
-            ${product.price}
-          </Heading>
-        </HStack>
-        <Text lineHeight={24} fontSize={12}>
+        <Text lineHeight={24} fontSize={15} textAlign='justify' >
           {product.description}
           </Text>
-        <Buttone onPress={() => navigation.navigate("Cart")} bg={Colors.main} color={Colors.white} mt={10}>
-          ADD TO CART
-          </Buttone>
-          {/* Review */}
-          <Review/>
       </ScrollView>
     </Box>
   );
