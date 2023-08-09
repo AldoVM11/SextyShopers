@@ -2,6 +2,12 @@
   "expo": {
     "name": "sextyshopers",
     "slug": "sextyshopers",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/favicon.png",
@@ -18,6 +24,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.graphscode.appGraph",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/favicon.png",
         "backgroundColor": "#C578C8"
@@ -25,6 +33,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "20008a9d-a1eb-4414-bb04-7bc309b3e6ae"
+      }
     }
   }
 }
