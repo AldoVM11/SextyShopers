@@ -13,7 +13,7 @@ function RegisterScreen( {navigation}) {
         size="lg"
         w="full"
         source={require("../../assets/cover.png")}
-        
+        opacity={60}
         />
         <Box 
         w="full" 
@@ -74,18 +74,18 @@ function RegisterScreen( {navigation}) {
           </VStack>
           <Button 
             _pressed={{
-              bg: Colors.main,
+              bg: Colors.Greener,
             }}
             my={30} 
             w="40%" 
             rounded={50} 
-            bg={Colors.main}
+            bg={Colors.black}
             onPress={() => navigation.navigate("Bottom")}
           >
             Sign Up
           </Button>
           <Button _pressed={{
-              bg: Colors.main,
+              bg: Colors.Greener,
             }}
             my={0} 
             w="40%" 

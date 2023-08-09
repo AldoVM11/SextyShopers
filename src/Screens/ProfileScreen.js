@@ -9,9 +9,9 @@ function ProfileScreen() {
         <Center bg={Colors.main} pt={10} pb={6}>
           <Image source={require('../../assets/images/user.png')} alt="profile" w={24} h={24} resizeMode="cover" borderRadius={100}/>
           <Heading bold fontSize={15} isTruncated my={2} color={Colors.white}>
-            Admin Doe
+            Username
           </Heading>
-          <Text italic fontSize={10} color={Colors.white}>Joined Dec 13 2022
+          <Text italic fontSize={10} color={Colors.white}>Joined Dec 13 2025
           </Text>
           </Center>
           {/* Tabs */}

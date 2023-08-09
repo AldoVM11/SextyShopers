@@ -14,6 +14,7 @@ function LoginScreen({navigation}) {
         size="lg"
         w="full"
         source={require("../../assets/cover.png")}
+        opacity={60}
         />
         <Box 
         w="full" 
@@ -34,6 +35,9 @@ function LoginScreen({navigation}) {
             pl={2}
             color={Colors.main} 
             borderBottomColor={Colors.underline}
+            backgroundColor={Colors.deepestGray} opacity={60}
+            placeholderTextColor={Colors.black}
+            rounded={10}
             />
             {/* Password */}
             <Input
@@ -47,22 +51,26 @@ function LoginScreen({navigation}) {
             pl={2}
             color={Colors.main} 
             borderBottomColor={Colors.underline}
+            backgroundColor={Colors.deepestGray} opacity={60}
+            placeholderTextColor={Colors.black}
+            rounded={10}
             />
           </VStack>
           <Button 
             _pressed={{
-              bg: Colors.main,
+              bg: Colors.Greener,
             }}
             my={30} 
             w="40%" 
             rounded={50} 
-            bg={Colors.main}
+            bg={Colors.black}
             onPress={() => navigation.navigate("Bottom")}
+            
           >
             Login
           </Button>
           <Button _pressed={{
-              bg: Colors.main,
+              bg: Colors.Greener,
             }}
             my={0} 
             w="40%" 
