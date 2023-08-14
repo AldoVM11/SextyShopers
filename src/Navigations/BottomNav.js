@@ -43,7 +43,7 @@ const BottomNav = () => {
     >
       {/* Tabs de abajo */}
       <Tab.Screen
-        name="Main"
+        name="Homepage"
         component={StackNav}
         options={{
           tabBarIcon: ({ focused }) => (

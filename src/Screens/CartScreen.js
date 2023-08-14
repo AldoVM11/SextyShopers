@@ -2,7 +2,7 @@ import { Box, Center, Heading, Image, ScrollView, Text} from "native-base";
 import React from "react"
 import Colors from "../color";
 import { useNavigation } from "@react-navigation/native";
-import Products from "../data/Products";
+import Glossary from "../data/Glossary";
 
 function CartScreen() {
   const navigation = useNavigation()
@@ -16,15 +16,16 @@ function CartScreen() {
           <Text italic fontSize={15} color={Colors.white}>Understanding of the elements of the Graphs
           </Text>
           </Center>
-    {Products.map((product) => (
+    {Glossary.map((glossary) => (
 
     <Box safeArea flex={1} bg={Colors.white} marginTop={5} rounded={10}>
       <ScrollView px={5} showsVerticalScrollIndicator={false}>
-        <Heading bold fontSize={20} mb={2} lineHeight={22} textAlign='center'>
-          {product.name}
+        <Heading bold fontSize={20} mb={2} lineHeight={22} textAlign='center' marginTop={5}>
+          {glossary.name}
         </Heading>
         <Text lineHeight={24} fontSize={15} textAlign='justify' >
-          {product.description}
+          {glossary.description}
+          
           </Text>
       </ScrollView>
       
