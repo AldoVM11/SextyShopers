@@ -17,7 +17,7 @@ export default function Tabs() {
     const [routes] = useState([
       {
         key: "first",
-        title: "PROFILE",
+        title: "",
       },
 /*       {
         key: "second",
@@ -51,7 +51,7 @@ export default function Tabs() {
 
 const styles = StyleSheet.create({
     tabStyle: {
-        backgroundColor: "black",
+        backgroundColor: "#82b9e5",
     },
     text: {
         fontSize: 13,

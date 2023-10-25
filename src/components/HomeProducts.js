@@ -30,7 +30,7 @@ function HomeProducts() {
           <Pressable
           onPress={() => navigation.navigate("Single", product)}
             key={product._id}
-            w="47%"
+            w="100%"
             bg={Colors.white}
             rounded="md"
             shadow={2}

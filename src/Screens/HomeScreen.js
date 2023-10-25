@@ -10,7 +10,7 @@ function HomeScreen() {
     <Box flex={1} bgColor={Colors.deepGray} >
           <Center bg={Colors.main} pt={10} pb={0}>
           <Heading bold fontSize={30} isTruncated my={0} color={Colors.white}>
-            Graph Sales
+          CyberSafe MX
           </Heading>
           </Center>
         <HomeSearch />

@@ -1,5 +1,5 @@
 const Colors = {
-    main:"#48B600",
+    main:"#020385",
     white: "#ffffff",
     black: "#000000",
     purple: "#C578C8",
@@ -7,8 +7,8 @@ const Colors = {
     orange: "#FFCE31",
     red: "#FF0000",
     gray: "#F4F4F4",
-    subGreen: "#EEFAE6",
-    deepGray: "#E1F0D7",
+    subGreen: "#cccce6",
+    deepGray: "#82b9e5",
     deepestGray: "#C4C4C4",
     blue: "#3B87F9",
     underline: "#E5E5E5",
