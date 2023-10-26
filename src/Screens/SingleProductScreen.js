@@ -39,11 +39,11 @@ function SingleProductScreen({route}) {
         </Heading>
         <Text lineHeight={24} fontSize={15} textAlign='justify' >
           {product.description}
-          </Text>
-         
-     <Box>
-     <QuizSection />
-     </Box>
+          </Text> 
+
+          <Box>
+          <QuizSection />
+          </Box>
 
            
                     
