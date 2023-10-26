@@ -13,39 +13,31 @@ import YoutubeIframe from "react-native-youtube-iframe";
 
 
 
-function SingleProductScreen({route}) {
+function SingleQuizScreen({route}) {
   const [value, setValue] = useState(0);
   const navigation = useNavigation()
   const product = route.params
   return (
     
     <Box safeArea flex={1} bg={Colors.white}>
-      <Box >
-       <YoutubeIframe
-          height={200}
-          play={false}
-          
-          videoId="mLI_QxszYrU"
-          />
-        </Box>
-      <ScrollView px={5} showsVerticalScrollIndicator={false}>
-        <Image
-          source={{uri:product.image}}
-          alt="Image"
-          w="full"
-          h={300}
-          resizeMode="contain"
-        />
+      <ScrollView  pt={50} px={5} showsVerticalScrollIndicator={false}>
+        
         <Heading bold fontSize={20} mb={2} lineHeight={22} textAlign='center'>
           {product.name}
         </Heading>
-        <Text marginBottom={30} lineHeight={24} fontSize={15} textAlign='justify' >
+        <Text lineHeight={24} fontSize={15} textAlign='justify' >
           {product.description}
           </Text> 
-          
+
+          <Box marginBottom={70}>
+          <QuizSection />
+          </Box>
+
+           
+                    
       </ScrollView>
     </Box>
   );
 }
 
-export default SingleProductScreen;
+export default SingleQuizScreen;

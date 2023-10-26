@@ -17,7 +17,6 @@
         correctAnswer: "Azul",
         selectedAnswer: null,
       },
-      // Agrega más preguntas según sea necesario
     ]);
 
     const [score, setScore] = useState(0);
@@ -55,9 +54,9 @@
 
     return (
       <View>
-        <Text style={{ fontSize: 18, fontWeight: "bold" }}>Quiz</Text>
+        <Text  style={{marginTop: 15, fontSize: 18, fontWeight: "bold" }}></Text>
         {questions.map((question) => (
-          <View key={question.id}>
+          <View  key={question.id}>
             <Text>{question.question}</Text>
             {question.options.map((option, index) => (
               <TouchableOpacity

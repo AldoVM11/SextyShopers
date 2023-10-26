@@ -1,7 +1,10 @@
-import { Center, Heading, Image, Text, View } from "native-base";
+import { Box, Center, Heading, Image, Text, View } from "native-base";
 import React from 'react'
 import Colors from "../color";
+import QuizSection from "./QuizSection";
 import Tabs from "../components/Profile/Tabs";
+
+
 
 function ProfileScreen() {
   return (
@@ -13,7 +16,10 @@ function ProfileScreen() {
           </Heading>
           {/* <Text italic fontSize={10} color={Colors.white}>Joined Dec 13 2025
           </Text> */}
+
+          
           </Center>
+          
           {/* Tabs */}
           <Tabs></Tabs>
           
