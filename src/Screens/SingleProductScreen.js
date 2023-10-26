@@ -5,8 +5,13 @@ import Rating from "../components/Rating";
 import NumericInput from "react-native-numeric-input";
 import Buttone from "../components/Buttone";
 import Review from "../components/Review";
+import QuizSection from "./QuizSection";
 import { useNavigation } from "@react-navigation/native";
 import YoutubeIframe from "react-native-youtube-iframe";
+
+
+
+
 
 function SingleProductScreen({route}) {
   const [value, setValue] = useState(0);
@@ -15,6 +20,12 @@ function SingleProductScreen({route}) {
   return (
     
     <Box safeArea flex={1} bg={Colors.white}>
+       <YoutubeIframe
+          height={200}
+          play={false}
+          
+          videoId="mLI_QxszYrU"
+          />
       <ScrollView px={5} showsVerticalScrollIndicator={false}>
         <Image
           source={{uri:product.image}}
@@ -29,11 +40,12 @@ function SingleProductScreen({route}) {
         <Text lineHeight={24} fontSize={15} textAlign='justify' >
           {product.description}
           </Text>
-          <YoutubeIframe
-          height={300}
-          play={true}
-          videoId="mLI_QxszYrU"
-          />
+         
+     <Box>
+     <QuizSection />
+     </Box>
+
+           
                     
       </ScrollView>
     </Box>
