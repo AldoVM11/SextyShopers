@@ -14,7 +14,7 @@ import YoutubeIframe from "react-native-youtube-iframe";
 
 
 function SingleProductScreen({route}) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(0); 
   const navigation = useNavigation()
   const product = route.params
   return (

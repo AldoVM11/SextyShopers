@@ -1,29 +1,21 @@
-import React, { useState, useEffect } from "react";
-import { useNavigation } from "@react-navigation/native";
-import { Text, View, Button } from "react-native"; // Import Text, View, and Button from react-native
-import questionsData from "../data/QuestionsQuiz"; // Import your questions data
+import React, { useState } from "react";
+import { ScrollView,View, Text, Button, TouchableOpacity } from "react-native";
+import questions from '../data/QuestionsQuiz';
+ // Assuming this is an array
 
-function QuizSection({ sectionName }) {
-  const [questions, setQuestions] = useState([]);
-  const navigation = useNavigation();
+// console.log('lo que trae questions:', questions);
+function QuizSection({ route }) {
+  const { questions } = route.params;
+
   const [score, setScore] = useState(0);
   const [message, setMessage] = useState("");
   const [badge, setBadge] = useState("");
 
-  useEffect(() => {
-    console.log("sectionName:", sectionName); // Log sectionName
-    // Filter questions based on the section name
-    const filteredQuestions = questionsData.filter(
-      (question) => question.section === sectionName
-    );
-    console.log("filteredQuestions:", filteredQuestions); // Log filteredQuestions
-    setQuestions(filteredQuestions);
-  }, [sectionName]);
+  const [quizQuestions, setQuizQuestions] = useState(questions);
+
 
   const handleOptionSelect = (questionId, selectedOption) => {
-    console.log("Question ID:", questionId);
-    console.log("Selected Option:", selectedOption);
-    setQuestions((prevQuestions) =>
+    setQuizQuestions((prevQuestions) =>
       prevQuestions.map((question) =>
         question.id === questionId
           ? { ...question, selectedAnswer: selectedOption }
@@ -33,65 +25,54 @@ function QuizSection({ sectionName }) {
   };
 
   const handleSubmitQuiz = () => {
-    const newScore = questions.reduce((acc, question) => {
+    const newScore = quizQuestions.reduce((acc, question) => {
       if (question.selectedAnswer === question.correctAnswer) {
         return acc + 1;
       }
       return acc;
     }, 0);
 
-    console.log("New Score:", newScore);
-
     setScore(newScore);
 
-    if (newScore / questions.length > 0.7) {
+    if (newScore / quizQuestions.length > 0.7) {
       setMessage("¡Felicidades! Pasaste el quiz.");
       setBadge("felicidades");
     } else {
       setMessage("Lo siento, no pasaste el quiz.");
       setBadge("perdedor");
     }
-
-    // You can navigate to the next screen here
-    // Example: navigation.navigate('NextScreenName', { score: newScore });
   };
-
+  
   return (
-    <View>
-      <Text style={{ fontSize: 20, fontWeight: "bold" }}>
-        Preguntas de la sección {sectionName}
-      </Text>
-      {questions.map((question) => (
-        <View key={question.id}>
-          <Text style={{ fontSize: 16 }}>{question.question}</Text>
-          {question.options.map((option, index) => (
-            <Button
-              key={index}
-              title={option}
-              onPress={() => handleOptionSelect(question.id, option)}
-              color={
-                question.selectedAnswer === option ? "lightblue" : "white"
-              }
-            />
-          ))}
-        </View>
-      ))}
-      <Button
-        title="Enviar respuestas"
-        onPress={handleSubmitQuiz}
-      />
-      <Text>
-        Puntaje: {score} / {questions.length}
-      </Text>
-      <Text>{message}</Text>
-      {badge === "felicidades" && (
-        <Text>¡Has ganado un badge de felicidades!</Text>
-      )}
-      {badge === "perdedor" && (
-        <Text>¡Has ganado un badge de perdedor!</Text>
-      )}
-    </View>
-  );
+  <ScrollView style={{ padding: 20, backgroundColor: "white" }}>
+    <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20, textAlign: "center" }}>Quiz</Text>
+    {quizQuestions.map((question) => (
+      <View key={question.id} style={{ marginBottom: 20 }}>
+        <Text style={{ fontSize: 16, fontWeight: "bold", marginBottom: 10 }}>{question.question}</Text>
+        {question.options.map((option, index) => (
+          <TouchableOpacity
+            key={index}
+            onPress={() => handleOptionSelect(question.id, option)}
+            style={{
+              borderWidth: 1,
+              borderColor: "lightgray",
+              padding: 10,
+              margin: 5,
+              backgroundColor: question.selectedAnswer === option ? "lightblue" : "white",
+            }}
+          >
+            <Text style={{ fontSize: 14 }}>{option}</Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    ))}
+    <Button title="Enviar respuestas" onPress={handleSubmitQuiz} />
+    <Text style={{ fontSize: 16, marginTop: 20 }}>Puntaje: {score} / {quizQuestions.length}</Text>
+    <Text style={{ fontSize: 16, marginTop: 20 }}>{message}</Text>
+    {badge === "felicidades" && <Text style={{ fontSize: 16, marginTop: 10, color: "green", fontWeight: "bold" }}>¡Has ganado un badge de felicidades!</Text>}
+    {badge === "perdedor" && <Text style={{ fontSize: 16, marginTop: 10, color: "red", fontWeight: "bold" }}>¡Has ganado un badge de perdedor!</Text>}
+  </ScrollView>
+);
 }
 
 export default QuizSection;

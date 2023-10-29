@@ -1,30 +1,52 @@
 import { Box, Flex, Heading, Pressable } from 'native-base';
-import React from 'react';
+import React, { useState } from 'react';
 import Products1 from '../../data/Products1';
 import Colors from '../../color';
 import { useNavigation } from '@react-navigation/native';
-import questions from '../../data/QuestionsQuiz'; // Asegúrate de que la importación sea correcta
+import questions from '../../data/QuestionsQuiz';
 
 const Profile = () => {
   const navigation = useNavigation();
 
-  // Define una función para cargar preguntas por sección
-  const loadQuestionsBySection = (section) => {
-     console.log("Section seleccionada:", section);
-    if (!Array.isArray(questions)) {
-      console.error('La variable "questions" no es una matriz válida.');
-      return;
-    }
+  // Define un estado para almacenar las preguntas filtradas
+  // const [filteredQuestions, setFilteredQuestions] = useState([]);
 
-    // Filtra las preguntas por la sección seleccionada
-    const selectedQuestions = questions.filter((question) => question.section === section);
+  // Define una función para cargar preguntas por sección y guardarlas en el estado
+  // const loadQuestionsBySection = (section) => {
+  //   if (!Array.isArray(questions)) {
+  //     console.error('La variable "questions" no es una matriz válida.');
+  //     return;
+  //   }
 
-    if (selectedQuestions.length > 0) {
-      navigation.navigate('QuizSection', { questions: selectedQuestions });
-    } else {
-      alert('No se encontraron preguntas para esta sección: ' + section);
-    }
-  };
+  //   // Filtra las preguntas por la sección seleccionada
+  //   const selectedQuestions = questions.filter((question) => question.section === section);
+
+  //   if (selectedQuestions.length > 0) {
+  //     // Guarda las preguntas filtradas en el estado
+  //     setFilteredQuestions(selectedQuestions);
+
+  //     // Navega a la pantalla de QuizSection con las preguntas filtradas
+  //     navigation.navigate('QuizSection', { questions: selectedQuestions });
+  //   } else {
+  //     alert('No se encontraron preguntas para esta sección: ' + section);
+  //   }
+  // };
+
+
+const loadQuestionsBySection = (section) => {
+  if (!Array.isArray(questions)) {
+    console.error('La variable "questions" no es una matriz válida.');
+    return;
+  }
+
+  const selectedQuestions = questions.filter((question) => question.section === section);
+
+  if (selectedQuestions.length > 0) {
+    navigation.navigate('QuizSection', { questions: selectedQuestions });
+  } else {
+    alert('No se encontraron preguntas para esta sección: ' + section);
+  }
+};
 
   return (
     <Box h="full" bg={Colors.white} px={5}>

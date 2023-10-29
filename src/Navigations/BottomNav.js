@@ -43,7 +43,7 @@ const BottomNav = () => {
     >
       {/* Tabs de abajo */}
       <Tab.Screen
-        name="Homepage"
+        name="Inicio"
         component={StackNav}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -59,7 +59,7 @@ const BottomNav = () => {
       />
       {/* Cart */}
       <Tab.Screen
-        name="Glossary"
+        name="Glosario"
         component={CartScreen}
         options={{
           tabBarButton: (props) => <CustomTab {...props} />,
@@ -84,7 +84,7 @@ const BottomNav = () => {
       />
       {/* Profile */}
       <Tab.Screen
-        name="Profile"
+        name="Quiz"
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ focused }) => (

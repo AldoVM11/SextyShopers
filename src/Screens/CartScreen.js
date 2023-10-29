@@ -11,9 +11,9 @@ function CartScreen() {
     <ScrollView flex={1} showsVerticalScrollIndicator={false}>
               <Center bg={Colors.main} pt={10} pb={6}>
           <Heading bold fontSize={30} isTruncated my={2} color={Colors.white}>
-            Glossary
+            Glosario
           </Heading>
-          <Text italic fontSize={15} color={Colors.white}>Understanding of the elements of the Graphs
+          <Text italic fontSize={15} color={Colors.white}>Conceptos acerca de seguridad
           </Text>
           </Center>
     {Glossary.map((glossary) => (

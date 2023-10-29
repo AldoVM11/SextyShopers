@@ -18,6 +18,7 @@ import QuizSection from "./src/Screens/QuizSection"; // Replace with the correct
 
 const Stack = createNativeStackNavigator();
 
+ 
 export default function App() {
   return (
     <NativeBaseProvider>

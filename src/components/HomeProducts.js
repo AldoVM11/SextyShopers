@@ -27,7 +27,7 @@ function HomeProducts() {
         marginTop={25}
       >
         {Products.map((product) => (
-          <Pressable
+          <Pressable 
           onPress={() => navigation.navigate("Single", product)}
             key={product._id}
             w="100%"
