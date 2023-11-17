@@ -43,36 +43,40 @@ function QuizSection({ route }) {
     }
   };
   
+  console.log('badge',badge);
   return (
-  <ScrollView style={{ padding: 20, backgroundColor: "white" }}>
-    <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20, textAlign: "center" }}>Quiz</Text>
-    {quizQuestions.map((question) => (
-      <View key={question.id} style={{ marginBottom: 20 }}>
-        <Text style={{ fontSize: 16, fontWeight: "bold", marginBottom: 10 }}>{question.question}</Text>
-        {question.options.map((option, index) => (
-          <TouchableOpacity
-            key={index}
-            onPress={() => handleOptionSelect(question.id, option)}
-            style={{
-              borderWidth: 1,
-              borderColor: "lightgray",
-              padding: 10,
-              margin: 5,
-              backgroundColor: question.selectedAnswer === option ? "lightblue" : "white",
-            }}
-          >
-            <Text style={{ fontSize: 14 }}>{option}</Text>
-          </TouchableOpacity>
-        ))}
+    <ScrollView style={{ flex: 1, padding: 20, backgroundColor: "white" }}>
+      {/* ... */}
+      <Text style={{ fontSize: 24, fontWeight: "bold", marginBottom: 20, textAlign: "center" }}>Quiz</Text>
+      {quizQuestions.map((question) => (
+        <View key={question.id} style={{ marginBottom: 20 }}>
+          <Text style={{ fontSize: 16, fontWeight: "bold", marginBottom: 10 }}>{question.question}</Text>
+          {question.options.map((option, index) => (
+            <TouchableOpacity
+              key={index}
+              onPress={() => handleOptionSelect(question.id, option)}
+              style={{
+                borderWidth: 1,
+                borderColor: "lightgray",
+                padding: 10,
+                margin: 5,
+                backgroundColor: question.selectedAnswer === option ? "lightblue" : "white",
+              }}
+            >
+              <Text style={{ fontSize: 14 }}>{option}</Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+      ))}
+      <Button title="Enviar respuestas" onPress={handleSubmitQuiz} />
+      <View style={{ marginBottom: 40 }}>
+        <Text style={{ fontSize: 16, marginTop: 20 }}>Puntaje: {score} / {quizQuestions.length}</Text>
+        <Text style={{ fontSize: 16, marginTop: 20 }}>{message}</Text>
+        {badge === "felicidades" && <Text style={{ fontSize: 16, marginTop: 10, color: "green", fontWeight: "bold" }}>¡Has ganado un badge de felicidades!</Text>}
+        {badge === "perdedor" && <Text style={{ fontSize: 16, marginTop: 10, color: "red", fontWeight: "bold" }}>¡Has ganado un badge de perdedor!</Text>}
       </View>
-    ))}
-    <Button title="Enviar respuestas" onPress={handleSubmitQuiz} />
-    <Text style={{ fontSize: 16, marginTop: 20 }}>Puntaje: {score} / {quizQuestions.length}</Text>
-    <Text style={{ fontSize: 16, marginTop: 20 }}>{message}</Text>
-    {badge === "felicidades" && <Text style={{ fontSize: 16, marginTop: 10, color: "green", fontWeight: "bold" }}>¡Has ganado un badge de felicidades!</Text>}
-    {badge === "perdedor" && <Text style={{ fontSize: 16, marginTop: 10, color: "red", fontWeight: "bold" }}>¡Has ganado un badge de perdedor!</Text>}
-  </ScrollView>
-);
+    </ScrollView>
+  );
 }
 
 export default QuizSection;
