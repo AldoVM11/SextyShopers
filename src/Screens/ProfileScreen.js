@@ -1,4 +1,4 @@
-import { Box, Center, Heading, Image, Text, View } from "native-base";
+import { Box, Center, Heading, Image, Text, View, ScrollView} from "native-base";
 import React from 'react'
 import Colors from "../color";
 import QuizSection from "./QuizSection";

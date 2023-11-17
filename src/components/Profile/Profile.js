@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Pressable } from 'native-base';
+import { Box, Flex, Heading, Pressable,ScrollView } from 'native-base';
 import React, { useState } from 'react';
 import Products1 from '../../data/Products1';
 import Colors from '../../color';
@@ -49,6 +49,7 @@ const loadQuestionsBySection = (section) => {
 };
 
   return (
+    <ScrollView>
     <Box h="full" bg={Colors.white} px={5}>
       <Flex
         flexWrap="wrap"
@@ -77,6 +78,7 @@ const loadQuestionsBySection = (section) => {
         ))}
       </Flex>
     </Box>
+    </ScrollView>
   );
 };
 

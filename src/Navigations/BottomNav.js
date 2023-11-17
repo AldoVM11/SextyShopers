@@ -13,6 +13,8 @@ import ProfileScreen from "../Screens/ProfileScreen";
 import CartScreen from "../Screens/CartScreen";
 import StackNav from "./StackNav";
 import NoticiasScreen from "../Screens/NoticiasScreen";
+import HelpScreen from "../Screens/HelpScreen";
+
 
 const Tab = createMaterialBottomTabNavigator();
 const CustomTab = ({ children, onPress }) => ( 
@@ -119,6 +121,22 @@ const BottomNav = () => {
                 size={24}
                 color={focused ? Colors.main : Colors.black}
               />
+            </Center>
+          ),
+        }}
+      />
+            <Tab.Screen
+        name="Ayuda"
+        component={HelpScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Center>
+             
+               <FontAwesome
+               name="ambulance"
+               size={24}
+               color={focused ? Colors.main : Colors.black}
+             />
             </Center>
           ),
         }}
