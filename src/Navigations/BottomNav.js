@@ -6,13 +6,13 @@ import {
   Entypo,
   AntDesign,
   FontAwesome,
-  FontAwesome5,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
 import Colors from "../color";
 import ProfileScreen from "../Screens/ProfileScreen";
 import CartScreen from "../Screens/CartScreen";
 import StackNav from "./StackNav";
+import NoticiasScreen from "../Screens/NoticiasScreen";
 
 const Tab = createMaterialBottomTabNavigator();
 const CustomTab = ({ children, onPress }) => ( 
@@ -94,6 +94,31 @@ const BottomNav = () => {
               ) : (
                 <AntDesign name="user" size={24} color={Colors.black} />
               )}
+            </Center>
+          ),
+        }}
+      />
+       <Tab.Screen
+        name="noticias"
+        component={NoticiasScreen}
+        options={{
+          tabBarButton: (props) => (
+            <CustomTab
+              {...props}
+              focused={noticiasFocused}
+              onPress={() => {
+                props.onPress();
+                setNoticiasFocused(true);
+              }}
+            />
+          ),
+          tabBarIcon: ({ focused }) => (
+            <Center>
+              <FontAwesome
+                name="newspaper-o"
+                size={24}
+                color={focused ? Colors.main : Colors.black}
+              />
             </Center>
           ),
         }}
