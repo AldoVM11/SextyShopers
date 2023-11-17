@@ -25,7 +25,7 @@ function SingleProductScreen({route}) {
           height={200}
           play={false}
           
-          videoId="mLI_QxszYrU"
+          videoId={product.video}
           />
         </Box>
       <ScrollView px={5} showsVerticalScrollIndicator={false}>
